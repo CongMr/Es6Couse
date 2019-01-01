@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: orchid;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="but"  value="but">
+    <div></div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function(){
+        function change(x=500,y=30){
+            $("div").animate({
+                width:x+"px"
+            },y)
+        }
+        $("#but").click(function(){
+            change(700,2000);
+        })
+    })
+    
+    {
+        function test(x,y=5){
+                console.log("默认值：",x,y)
+        }
+        test(5,10);
+    }
+    
+    {
+        function test(x,y = "world",c = "123"){
+            console.log("默认值：",x,y,c);
+        }
+        test("hello");
+    }
+</script>
